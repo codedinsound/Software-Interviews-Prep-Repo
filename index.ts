@@ -7,6 +7,7 @@ import { ListNode, reverseLinkedList } from './Linked List Questions';
 import StackAndQueuesTesting from './Stacks and Queues Questions';
 import SortingAlgorithmsUtil from './Sorting Algorithms';
 import { SortType } from './Data Types';
+import RecursionTesting from './Problems Involving Recursion Questions';
 
 // MARK: Global Variables
 // -------------------------------------
@@ -128,7 +129,8 @@ const findTwoSumOptimized = (nums, target): number[] => {
 
   // Sorting Algorithms
   // --------------------------
-  res = SortingAlgorithmsUtil.test(SortType.Selection);
+  // res = SortingAlgorithmsUtil.test(SortType.Selection);
+  res = RecursionTesting.test();
 
   // Print Out
   console.log(res);

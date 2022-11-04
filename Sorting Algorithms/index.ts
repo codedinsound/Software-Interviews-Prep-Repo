@@ -79,6 +79,52 @@ class SortingAlgorithmsUtil {
   static mergeSort(array: number[]): void {}
 
   // ====================================================================================
+  // MARK: Quick Sort
+  // Time:
+  // Space:
+  // Description:
+  // ====================
+  private static partitionArray(array, left, right) {
+    const pivotElement = array[right];
+    let partitionIndex = left; // n + n/2 + n/4 + n/8 ......................
+
+    for (let j = left; j < right; j++) {
+      if (array[j] < pivotElement) {
+        this.swap(array, partitionIndex, j);
+        partitionIndex++;
+      }
+    }
+    this.swap(array, partitionIndex, right);
+    return partitionIndex;
+  }
+
+  static quickSort(array, left, right) {
+    if (left < right) {
+      const partitionIndex = this.partitionArray(array, left, right);
+      this.quickSort(array, left, partitionIndex - 1);
+      this.quickSort(array, partitionIndex + 1, right);
+    }
+  }
+
+  // ====================================================================================
+  // MARK: Hoeres Quick Select Algorithm
+  // Time:
+  // Space:
+  // Description:
+  // ====================
+
+  static quickSelect(array, left, right, indexToFind) {
+    if (left < right) {
+      const partitionIndex = this.partitionArray(array, left, right);
+
+      if (partitionIndex === indexToFind) return array[partitionIndex];
+      else if (indexToFind < partitionIndex)
+        return this.quickSelect(array, left, partitionIndex - 1, indexToFind);
+      else
+        return this.quickSelect(array, partitionIndex + 1, right, indexToFind);
+    }
+  }
+  // ====================================================================================
   // MARK: TEST
 
   static test(algorithm: SortType): any[] {
