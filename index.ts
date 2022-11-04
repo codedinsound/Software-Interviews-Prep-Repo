@@ -8,6 +8,7 @@ import StackAndQueuesTesting from './Stacks and Queues Questions';
 import SortingAlgorithmsUtil from './Sorting Algorithms';
 import { SortType } from './Data Types';
 import RecursionTesting from './Problems Involving Recursion Questions';
+import ArrayBasedQuestions from './Problems Involving Array Questions';
 
 // MARK: Global Variables
 // -------------------------------------
@@ -130,7 +131,9 @@ const findTwoSumOptimized = (nums, target): number[] => {
   // Sorting Algorithms
   // --------------------------
   // res = SortingAlgorithmsUtil.test(SortType.Selection);
-  res = RecursionTesting.test();
+  // res = RecursionTesting.test();
+
+  res = ArrayBasedQuestions.test();
 
   // Print Out
   console.log(res);
@@ -141,5 +144,4 @@ const findTwoSumOptimized = (nums, target): number[] => {
   document.getElementById('app').appendChild(tag);
 })();
 
-// MARK: Update UI
-// ---------------------------------------------------------------------
+// Global Space
