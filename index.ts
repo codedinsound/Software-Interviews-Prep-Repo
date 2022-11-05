@@ -9,10 +9,8 @@ import SortingAlgorithmsUtil from './Sorting Algorithms';
 import { SortType } from './Data Types';
 import RecursionTesting from './Problems Involving Recursion Questions';
 import ArrayBasedQuestions from './Problems Involving Array Questions';
-
-// MARK: Global Variables
-// -------------------------------------
-let res: any = 'Run';
+import { MyArray } from './Data Structures';
+// ============================================================================================
 
 // MARK: Arrays
 // --------------
@@ -123,7 +121,6 @@ const findTwoSumOptimized = (nums, target): number[] => {
 // reverseLinkedList(head);
 
 (() => {
-  console.log('Hello World');
   let res: any = [];
 
   // res = StackAndQueuesTesting.testIsValidParenthesis();
@@ -133,10 +130,22 @@ const findTwoSumOptimized = (nums, target): number[] => {
   // res = SortingAlgorithmsUtil.test(SortType.Selection);
   // res = RecursionTesting.test();
 
-  res = ArrayBasedQuestions.test();
+  // Array Based
+  // --------------------------
+  // res = ArrayBasedQuestions.test();
+
+  // Other Testing
+  // -------------------------
+  let arr = new MyArray<number>();
 
   // Print Out
-  console.log(res);
+  arr.push(23);
+  arr.push(400);
+  arr.push(4300);
+
+  arr.delete(1);
+
+  console.log(arr);
 
   // Update UI on the DOM
   let tag = document.createElement('h1');
