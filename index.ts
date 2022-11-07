@@ -134,18 +134,11 @@ const findTwoSumOptimized = (nums, target): number[] => {
   // --------------------------
   // res = ArrayBasedQuestions.test();
 
+  res = StackAndQueuesTesting.testMinRemoveToMakeValid();
+  res = StackAndQueuesTesting.testQueuesWithStacks();
+
   // Other Testing
   // -------------------------
-  let arr = new MyArray<number>();
-
-  // Print Out
-  arr.push(23);
-  arr.push(400);
-  arr.push(4300);
-
-  arr.delete(1);
-
-  console.log(arr);
 
   // Update UI on the DOM
   let tag = document.createElement('h1');
